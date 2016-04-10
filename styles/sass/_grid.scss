@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+.pagewrap {
+  margin: 0 auto;
+  width: 90%;
+  background: red;
+  height: 20px;
+  text-align: center;
+  &:after {
+    @include clearfix;
+  }
+}
+.gallery-gif {
+  display: block;
+  float:left;
+  width: 33.3333%;
+  padding-top: 33.3333%;
+  background: gray;
+  border: 1px solid white;
+}

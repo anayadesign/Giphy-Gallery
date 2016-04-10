@@ -1,0 +1,19 @@
+// Typography
+$font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+// Colors
+$color-blue: #1565c0;
+$color-dark-gray: #333;
+$color-medium-gray: #999;
+$color-light-gray: #ddd;
+
+// Font Colors
+$color-font: $color-dark-gray;
+
+//mixins
+
+@mixin clearfix {
+  display: table;
+  content: '';
+  clear: both;
+}
