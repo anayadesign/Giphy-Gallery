@@ -39,3 +39,8 @@ function getGiphy() {
   oReq.open("GET",getGiphyAPI, true);
   oReq.send();
 }
+document.getElementById("search").onkeyup = function(event){
+  if(event.keyCode == 13){
+    document.getElementById("launch").click();
+  }
+};
