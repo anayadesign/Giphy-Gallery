@@ -29,6 +29,18 @@ function getGiphy() {
       gifImages.setAttribute("style", "background-image: url(" + obj.images.fixed_height.url + ");"); //set bg images, not dry
       document.getElementById("galleryWrap").appendChild(gifImages); //+ images to the DOM
     }); //logs all bitly_urls
+
+    //lightbox script
+    function giphyLightbox() {
+      var gifs = document.getElementsByClassName('gallery-gif');
+      for(var i = 0; i < gifs.length; i++) {
+        var gif = gifs[i];
+        gif.onclick = function() {
+          console.log('ho ho ho');
+        }
+      }
+    }
+    giphyLightbox();
   }
 
   //Get the data from Giphy API
