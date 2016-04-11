@@ -7,18 +7,19 @@ body {
 .pagewrap {
   margin: 0 auto;
   width: 90%;
-  background: red;
-  height: 20px;
   text-align: center;
   &:after {
     @include clearfix;
   }
 }
+.gallery:after {
+  @include clearfix;
+}
 .gallery-gif {
   display: block;
-  float:left;
-  width: 33.3333%;
-  padding-top: 33.3333%;
-  background: gray;
-  border: 1px solid white;
+  float: left;
+  padding-top: 25%;
+  width: 25%;
+  background-position: center;
+  background-size: cover;
 }

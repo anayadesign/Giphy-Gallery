@@ -360,6 +360,25 @@ textarea {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
+.input-search {
+  color: gray;
+  padding: .5em;
+  display: block;
+  margin: .5em auto;
+  border: 1px solid lightgray;
+  border-radius: 18px; }
+
+.btn-search {
+  display: block;
+  padding: .5em;
+  border: 0;
+  border-radius: 18px;
+  margin: .5em auto;
+  background-color: limegreen;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase; }
+
 * {
   box-sizing: border-box; }
 
@@ -369,20 +388,23 @@ body {
 .pagewrap {
   margin: 0 auto;
   width: 90%;
-  background: red;
-  height: 20px;
   text-align: center; }
   .pagewrap:after {
     display: table;
     content: '';
     clear: both; }
 
+.gallery:after {
+  display: table;
+  content: '';
+  clear: both; }
+
 .gallery-gif {
   display: block;
   float: left;
-  width: 33.3333%;
-  padding-top: 33.3333%;
-  background: gray;
-  border: 1px solid white; }
+  padding-top: 25%;
+  width: 25%;
+  background-position: center;
+  background-size: cover; }
 
 /*# sourceMappingURL=main.css.map */

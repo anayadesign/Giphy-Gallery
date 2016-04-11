@@ -19,18 +19,10 @@
         <button type="button" onclick="">Search</button>
       </form>
       -->
-      <input type="text" id="search" name="q" placeholder="Find some gifs">
-      <button type="button" id="launch" onclick="getGiphy()">Search</button>
-      <div class="gallery">
-        <div class="gallery-gif"></div>
-        <div class="gallery-gif"></div>
-        <div class="gallery-gif"></div>
-        <div class="gallery-gif"></div>
-        <div class="gallery-gif"></div>
-        <div class="gallery-gif"></div>
-        <div class="gallery-gif"></div>
-        <div class="gallery-gif"></div>
-        <div class="gallery-gif"></div>
+      <input type="text" id="search" class="input-search" name="q" placeholder="search">
+      <button type="button" id="launch" class="btn-search" onclick="getGiphy()">Get gifs</button>
+      <div id="galleryWrap" class="gallery">
+      <!--GIFS GO HERE-->
       </div>
     </div>
     <div id="lightbox"></div>
