@@ -4,7 +4,7 @@ var textField = document.getElementById("search"), //search input
 
 //Triggered by the button!
 function getGiphy() {
-  var searchLimit = "&limit=9",
+  var searchLimit = "&limit=8",
       searchRating = "&rating=pg",
       searchURL = "http://api.giphy.com/v1/gifs/search?q=",
       searchKey = "&api_key=dc6zaTOxFJmzC",
@@ -12,19 +12,29 @@ function getGiphy() {
       getGiphyAPI = searchURL + searchString.split(' ').join('+') + searchKey + searchLimit + searchRating;
   console.log(getGiphyAPI);
 
+  function reqLoading(){
+    var progressIndicator = document.createElement("p");
+    progressIndicator.setAttribute("id","loading-text")
+    document.getElementById("galleryWrap").appendChild(progressIndicator);
+    document.getElementById("loading-text").innerHTML = "LOADING";
+  }
 
   function reqListener() {
-    console.log("LOADING");
     var searchData = this.response,
         searchObj = JSON.parse(searchData);
-
-    //console.log(searchData);
-    console.log(searchObj.data[0].bitly_url);//log a specific value, needs a loop from 0 through 8
-    console.log("FINISHED");
+    document.getElementById("galleryWrap").innerHTML = ""; //clears results
+    searchObj.data.forEach(function(obj) { //gif amount = searchLimit, for each:
+      var gifImages = document.createElement("div");
+      gifImages.setAttribute("class", "gallery-gif"); //set classes, setAttribute not dry
+      gifImages.setAttribute("style", "background-image: url(" + obj.images.fixed_height.url + ");"); //set bg images, not dry
+      document.getElementById("galleryWrap").appendChild(gifImages); //+ images to the DOM
+    }); //logs all bitly_urls
   }
 
   //Get the data from Giphy API
   var oReq = new XMLHttpRequest();
+  //needs a loading function
+  oReq.addEventListener("progress", reqLoading);
   oReq.addEventListener("load", reqListener);
   oReq.open("GET",getGiphyAPI, true);
   oReq.send();
