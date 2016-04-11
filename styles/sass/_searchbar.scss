@@ -1,19 +1,25 @@
 .input-search {
-  color: gray;
-  padding: .5em;
-  display: block;
+  color: $color-gray;
+  padding: .5em 1em;
+  display: inline-block;
   margin: .5em auto;
-  border: 1px solid lightgray;
-  border-radius: 18px;
+  border: 1px solid $color-light-gray;
+  border-radius: 0;
+  &:focus {
+    outline: none;
+  }
 }
 .btn-search {
-  display: block;
-  padding: .5em;
-  border: 0;
-  border-radius: 18px;
+  display: inline-block;
+  padding: .5em 1em;
+  border-radius: 0;
   margin: .5em auto;
-  background-color: limegreen;
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
+  border: 1px solid $color-light-gray;
+  background-color: $color-white;
+  color: $color-gray;
+  font-weight: normal;
+  text-transform: capitalize;
+  &:focus {
+    outline: none;
+  }
 }
