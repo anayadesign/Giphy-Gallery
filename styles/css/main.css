@@ -411,4 +411,19 @@ body {
   background-position: center;
   background-size: cover; }
 
+.gallery-lb-bg {
+  display: none; }
+
+.gallery-lb-bg.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75); }
+
+.gallery-lb-control {
+  color: white; }
+
 /*# sourceMappingURL=main.css.map */
