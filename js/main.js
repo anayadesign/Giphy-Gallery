@@ -35,8 +35,24 @@ function getGiphy() {
       var gifs = document.getElementsByClassName('gallery-gif');
       for(var i = 0; i < gifs.length; i++) {
         var gif = gifs[i];
-        gif.onclick = function() {
-          console.log('ho ho ho');
+        var bg = document.getElementById("lightbox");
+        gif.onclick = function makelightbox () {
+          //when lightbox is triggered
+          bg.classList.toggle("active"); //add activeclass
+          var fg = this; //foreground image
+          var cln = fg.cloneNode(true); //copy the html
+          var target = document.getElementById("lb-prev"); //put it there
+          bg.insertBefore(cln, target);
+        }
+        //next, prev, exit
+        var lbPrev = document.getElementById("lb-prev"),
+            lbNext = document.getElementById("lb-next"),
+            lbExit = document.getElementById("lb-exit");
+
+        lbExit.onclick = function() {
+          var target = document.getElementById("lb-prev");
+          target.previousElementSibling.remove()
+          bg.classList.toggle("active");
         }
       }
     }
