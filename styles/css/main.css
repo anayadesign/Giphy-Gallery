@@ -380,6 +380,8 @@ textarea {
   color: gray;
   font-weight: normal;
   text-transform: capitalize; }
+  .btn-search:hover {
+    background-color: lightgray; }
   .btn-search:focus {
     outline: none; }
 
@@ -406,14 +408,20 @@ body {
 .gallery-gif {
   display: block;
   float: left;
-  padding-top: 25%;
-  width: 25%;
+  width: 50%;
+  padding-top: 50%;
   background-position: center;
   background-size: cover; }
+  .gallery-gif:hover {
+    cursor: pointer; }
 
+@media screen and (min-width: 568px) {
+  .gallery-gif {
+    width: 25%;
+    padding-top: 25%; } }
 .gallery-lb-bg .gallery-gif {
   float: none;
-  margin: 2em auto; }
+  margin: 4em auto 2em; }
 
 .gallery-lb-bg {
   display: none; }
@@ -430,5 +438,7 @@ body {
 
 .gallery-lb-control {
   color: white; }
+  .gallery-lb-control:hover {
+    cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

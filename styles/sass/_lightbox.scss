@@ -13,4 +13,7 @@
 }
 .gallery-lb-control {
   color: white;
+  &:hover {
+    cursor: pointer;
+  }
 }

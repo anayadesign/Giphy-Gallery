@@ -19,6 +19,9 @@
   color: $color-gray;
   font-weight: normal;
   text-transform: capitalize;
+  &:hover {
+    background-color: $color-light-gray;
+  }
   &:focus {
     outline: none;
   }
