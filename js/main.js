@@ -12,6 +12,7 @@ function getGiphy() {
       getGiphyAPI = searchURL + searchString.split(' ').join('+') + searchKey + searchLimit + searchRating;
   console.log(getGiphyAPI);
 
+  //progress. loading state
   function reqLoading(){
     var progressIndicator = document.createElement("p");
     progressIndicator.setAttribute("id","loading-text")
@@ -19,6 +20,7 @@ function getGiphy() {
     document.getElementById("loading-text").innerHTML = "LOADING";
   }
 
+  //when data is loaded
   function reqListener() {
     var searchData = this.response,
         searchObj = JSON.parse(searchData);
@@ -28,7 +30,7 @@ function getGiphy() {
       gifImages.setAttribute("class", "gallery-gif"); //set classes, setAttribute not dry
       gifImages.setAttribute("style", "background-image: url(" + obj.images.fixed_height.url + ");"); //set bg images, not dry
       document.getElementById("galleryWrap").appendChild(gifImages); //+ images to the DOM
-    }); //logs all bitly_urls
+    });
 
     //lightbox script
     function giphyLightbox() {
@@ -48,7 +50,12 @@ function getGiphy() {
         var lbPrev = document.getElementById("lb-prev"),
             lbNext = document.getElementById("lb-next"),
             lbExit = document.getElementById("lb-exit");
-
+        lbNext.onclick = function() {
+          //next image function
+        }
+        lbPrev.onclick = function() {
+          //prev image function
+        }
         lbExit.onclick = function() {
           var target = document.getElementById("lb-prev");
           target.previousElementSibling.remove()
@@ -67,8 +74,10 @@ function getGiphy() {
   oReq.open("GET",getGiphyAPI, true);
   oReq.send();
 }
+
+//press enter, get gifs! (when focused in search input)
 document.getElementById("search").onkeyup = function(event){
   if(event.keyCode == 13){
-    document.getElementById("launch").click();
+    getGiphy();
   }
 };
