@@ -8,7 +8,7 @@ Enjoy! :grin:
 **To do:**
 * [x] User sees search field and enters a search string.
   * [x] Make it look nice. Better yet, make it pop. :tada:
-* [x] Based on search string, access [Giphy Search API](https://github.com/Giphy/GiphyAPI#search-endpoint), limit the results to the first 9 images, for now. No need to get too crazy. :wink:
+* [x] Based on search string, access [Giphy Search API](https://github.com/Giphy/GiphyAPI#search-endpoint), limit the results to the first 8 images, for now. No need to get too crazy. :wink:
 * [x] Parse JSON into markup, display images as as a grid.
   * [x] Again, make [the grid](http://gph.is/11yryy3) look nice.
 * [x] User clicks image, launches lightbox gallery. :bulb:
