@@ -12,11 +12,12 @@ Enjoy! :grin:
 * [x] Parse JSON into markup, display images as as a grid.
   * [x] Again, make [the grid](http://gph.is/11yryy3) look nice.
 * [x] User clicks image, launches lightbox gallery. :bulb:
+* [ ] Image title is displayed in lightbox view.
 * [x] User has next, prev, and exit options to control the gallery.
-  * [ ] User clicks next button, lightbox shows next image
-  * [ ] User clicks prev button, lightbox shows prev image
-  * [ ] User reaches end of gallery, loops back to other end
-  * [x] User clicks exit button, lightbox closes
+  * [ ] User clicks next button, lightbox shows next image.
+  * [ ] User clicks prev button, lightbox shows prev image.
+  * [ ] User reaches end of gallery, loops back to other end.
+  * [x] User clicks exit button, lightbox closes.
   * [ ] Also, keyboard commands!
 
 **!important**
