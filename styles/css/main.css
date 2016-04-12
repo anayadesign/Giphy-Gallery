@@ -411,6 +411,10 @@ body {
   background-position: center;
   background-size: cover; }
 
+.gallery-lb-bg .gallery-gif {
+  float: none;
+  margin: 2em auto; }
+
 .gallery-lb-bg {
   display: none; }
 
@@ -421,7 +425,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.75); }
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center; }
 
 .gallery-lb-control {
   color: white; }
