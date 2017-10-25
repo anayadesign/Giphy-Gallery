@@ -1,0 +1,26 @@
+{
+  "name": "giphy-gallery",
+  "version": "1.0.0",
+  "description": "Hey there! If you're familiar with animated gifs, you know that there's at least 1 (million) for every single thing you can possibly imagine. There are so many gifs out there that it can be pretty easy to feel overwhelmed whilst searching for the perfect one. Well fret no more, using the power of the Giphy API, this tool will serve up **8** gifs based on your input and display them in a neat grid. Click on one of the gifs to launch a spiffy lightbox so you can view the gif with less background distraction.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anayadesign/Giphy-Gallery.git"
+  },
+  "author": "David Anaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anayadesign/Giphy-Gallery/issues"
+  },
+  "homepage": "https://github.com/anayadesign/Giphy-Gallery#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.5.3",
+    "pug": "^2.0.0-rc.4"
+  }
+}
